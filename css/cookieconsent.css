@@ -32,20 +32,18 @@
   border-radius: 16px !important;
 }
 
-/* Consent Modal Box Position (Bottom-Left above cookie button) */
+/* Position consent modal on the bottom-left above floating button */
 #cc-main .cm--box.cm--bottom.cm--left,
 #cc-main .cm-wrapper {
-  bottom: 85px !important;
-  left: 20px !important;
+  bottom: 75px !important;
+  left: 16px !important;
   right: auto !important;
-  max-width: 420px !important;
-  padding: 1.5rem !important;
-}
-
-/* Preferences Modal Box Position (Left-aligned) */
-#cc-main .pm-wrapper {
-  max-width: 580px !important;
-  padding: 2rem !important;
+  max-width: 340px !important;
+  background-color: #0c1527 !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85) !important;
+  border: 1px solid rgba(0, 247, 255, 0.4) !important;
+  border-radius: 16px !important;
+  padding: 1.1rem !important;
 }
 
 /* ------------------------------------------
