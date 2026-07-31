@@ -1,0 +1,14 @@
+/* Vanilla CookieConsent v3 Theme Overrides */
+#cc-main {
+  --cc-bg: #0f172a;
+  --cc-text: #f8fafc;
+  --cc-btn-primary-bg: #10b981;
+  --cc-btn-primary-text: #ffffff;
+  --cc-btn-primary-hover-bg: #059669;
+  --cc-btn-secondary-bg: #1e293b;
+  --cc-btn-secondary-text: #f8fafc;
+  --cc-btn-secondary-hover-bg: #334155;
+  --cc-toggle-on-bg: #10b981;
+  --cc-modal-border-radius: 16px;
+  --cc-font-family: 'Inter', sans-serif;
+}

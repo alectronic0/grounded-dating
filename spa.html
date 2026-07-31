@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grounded Dating | Single Page Application (SPA Demo)</title>
+  <meta name="description" content="Grounded Dating SPA Demo - London's human-first matchmaking service.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.0.0/dist/cookieconsent.css">
+  <link rel="stylesheet" href="css/cookieconsent.css">
+  
+  <script data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'ad_storage': 'denied', 'analytics_storage': 'denied' });
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- SPA Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" data-spa-target="hero" class="brand-logo">
+        <div class="logo-icon">G</div>
+        <span>Grounded<span class="text-gradient-green">Dating</span> <span style="font-size: 0.65rem; background: var(--primary-blue); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--accent-yellow);">SPA DEMO</span></span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#hero" data-spa-target="hero" class="nav-link">Home</a></li>
+        <li><a href="#journey" data-spa-target="journey" class="nav-link">Flow</a></li>
+        <li><a href="#about" data-spa-target="about" class="nav-link">How It Works</a></li>
+        <li><a href="#mission" data-spa-target="mission" class="nav-link">Mission</a></li>
+        <li><a href="#careers" data-spa-target="careers" class="nav-link">Careers</a></li>
+        <li><a href="#faqs" data-spa-target="faqs" class="nav-link">FAQs</a></li>
+        <li><a href="#contact" data-spa-target="contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#join" data-spa-target="join" class="btn btn-primary">Join Waiting List</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="highlight-badge">🌱 Single-Page Application Experience</div>
+        <h1>Making Real Life Dating <span class="text-gradient-green">Easier For You</span></h1>
+        <p class="hero-subtitle">
+          Affordable matchmaking the way it used to work: one human matchmaker, understanding who you genuinely are, setting you up on a curated blind date. No swiping. No infinite scroll. No texting traps.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#join" data-spa-target="join" class="btn btn-yellow">Join The Waiting List ➔</a>
+          <button class="btn btn-whatsapp whatsapp-launch-btn">💬 Chat on WhatsApp</button>
+        </div>
+      </div>
+      <div class="hero-card-visual">
+        <div class="hero-card-header">
+          <span class="match-badge">✨ Blind Date Guarantee</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">London Venues</span>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">Real Connection, Zero Filters</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          "Apps maximize choices. Grounded Dating maximizes action. We handle venue logistics so all you have to do is show up."
+        </p>
+        <div style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; padding: 1rem; border-radius: 8px;">
+          <p style="font-size: 0.85rem; font-weight: 600; color: #10b981;">🛡️ Verified Identity & Safety First</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Every member completes ID verification via Didit before any date is set up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Journey Flow -->
+  <section id="journey" class="journey-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="highlight-badge">🗺️ The Journey</div>
+        <h2>From Contact to <span class="text-gradient-yellow">Life Long Partner</span></h2>
+        <p>A simple 6-step pathway from inquiry to meeting your partner.</p>
+      </div>
+
+      <div class="journey-timeline">
+        <div class="journey-step">
+          <div class="step-num">1</div>
+          <h4 class="step-title">Contact Us</h4>
+          <p class="step-desc">Reach out via form or WhatsApp.</p>
+        </div>
+
+        <div class="journey-step didit-step">
+          <div class="step-num">2</div>
+          <h4 class="step-title">ID Verify</h4>
+          <p class="step-desc">Verify your ID securely via Didit.</p>
+          <span class="didit-badge">verify.didit.me</span>
+        </div>
+
+        <div class="journey-step">
+          <div class="step-num">3</div>
+          <h4 class="step-title">Sign Up</h4>
+          <p class="step-desc">Share values & non-negotiables.</p>
+        </div>
+
+        <div class="journey-step">
+          <div class="step-num">4</div>
+          <h4 class="step-title">Waiting List</h4>
+          <p class="step-desc">Matchmaker searches our network.</p>
+        </div>
+
+        <div class="journey-step">
+          <div class="step-num">5</div>
+          <h4 class="step-title">Iterate</h4>
+          <p class="step-desc">Go on blind dates & give feedback.</p>
+        </div>
+
+        <div class="journey-step">
+          <div class="step-num">6</div>
+          <h4 class="step-title">Partner</h4>
+          <p class="step-desc">Build a life long relationship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: About / How It Works -->
+  <section id="about" style="padding: 6rem 0;">
+    <div class="container legal-content" style="margin: 0 auto; max-width: 1000px;">
+      <div class="highlight-badge">HOW IT WORKS</div>
+      <h2>About Grounded Dating</h2>
+      <p>Affordable matchmaking the way it used to work: one person, doing the work of actually understanding you, and introducing you to someone worth meeting.</p>
+      <p style="margin-top: 1rem;"><strong>Prices start from £20 per date experience. No subscription trap.</strong></p>
+    </div>
+  </section>
+
+  <!-- Section 4: Mission -->
+  <section id="mission" style="padding: 4rem 0; background: rgba(15, 23, 42, 0.6);">
+    <div class="container legal-content" style="margin: 0 auto; max-width: 1000px;">
+      <div class="highlight-badge">MISSION</div>
+      <h2>Make Real Life Dating Easier</h2>
+      <p>Grounded Dating challenges optimisation-driven mate selection and replaces it with structured real-world experimentation. The product standardises logistics while preserving spontaneity.</p>
+    </div>
+  </section>
+
+  <!-- Section 5: Careers -->
+  <section id="careers" style="padding: 6rem 0;">
+    <div class="container legal-content" style="margin: 0 auto; max-width: 1000px;">
+      <div class="highlight-badge">CAREERS</div>
+      <h2>Join Our Early Team</h2>
+      <p>Open roles for <strong>PR & Operations Lead</strong> and <strong>Software Developer</strong>. Send applications to <a href="mailto:info@groundeddating.com" style="color: var(--accent-yellow);">info@groundeddating.com</a>.</p>
+    </div>
+  </section>
+
+  <!-- Section 6: FAQs -->
+  <section id="faqs" class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="highlight-badge">FAQS</div>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>How does a Grounded blind date work?</span>
+            <span class="faq-toggle-icon">+</span>
+          </div>
+          <div class="faq-body">
+            You complete ID verification via Didit, share your non-negotiables, and we arrange a blind date at a public London venue. No photos or bios beforehand!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Join Application Form -->
+  <section id="join" style="padding: 6rem 0; background: rgba(15, 23, 42, 0.6);">
+    <div class="container">
+      <div class="section-header">
+        <div class="highlight-badge">JOIN THE WAITING LIST</div>
+        <h2>Apply For Grounded Dating</h2>
+      </div>
+
+      <div class="form-card">
+        <form id="grounded-join-form-spa">
+          <div class="form-group">
+            <label class="form-label" for="spa-join-name">Full Name *</label>
+            <input type="text" id="spa-join-name" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="spa-join-email">Email Address *</label>
+            <input type="email" id="spa-join-email" class="form-input" placeholder="you@example.com" required>
+          </div>
+          <div class="captcha-container">
+            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+          </div>
+          <button type="submit" class="btn btn-yellow" style="width: 100%; padding: 1rem;">Submit Application ➔</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Contact -->
+  <section id="contact" style="padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <h2>Contact Matchmaking Team</h2>
+      <p style="color: var(--text-muted); margin: 1rem 0 2rem;">Email: info@groundeddating.com | WhatsApp: +44 7429 398306</p>
+      <button class="btn btn-whatsapp whatsapp-launch-btn">📱 Message on WhatsApp</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Grounded Connections Ltd. All Rights Reserved. Links: <a href="legal.html" target="_blank">Legal Hub</a> | <a href="privacy-policy.html" target="_blank">Privacy</a> | <a href="terms-and-conditions.html" target="_blank">Terms</a></p>
+    </div>
+  </footer>
+
+  <button type="button" class="cookie-floating-btn" data-cc="show-preferencesModal" aria-label="Cookie Settings">🍪</button>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.0.0/dist/cookieconsent.umd.js"></script>
+  <script src="js/cookieconsent-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

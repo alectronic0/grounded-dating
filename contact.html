@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Grounded Dating</title>
+  <meta name="description" content="Contact Grounded Dating via email info@groundeddating.com or WhatsApp +44 7429 398306.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.0.0/dist/cookieconsent.css">
+  <link rel="stylesheet" href="css/cookieconsent.css">
+  <script data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'ad_storage': 'denied', 'analytics_storage': 'denied' });
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">G</div>
+        <span>Grounded<span class="text-gradient-green">Dating</span></span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">How It Works</a></li>
+        <li><a href="mission.html" class="nav-link">Mission</a></li>
+        <li><a href="careers.html" class="nav-link">Careers</a></li>
+        <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="join.html" class="btn btn-primary">Join Waiting List</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 9rem 0 5rem;">
+    <div class="container">
+      <div class="section-header">
+        <div class="highlight-badge">CONTACT US</div>
+        <h1>We're Here To Help</h1>
+        <p>Drop us a line anytime or send us a text on WhatsApp.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto 3rem;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📧</div>
+          <h3 style="color: var(--accent-yellow); margin-bottom: 0.5rem;">Email Support</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Drop us a line anytime.</p>
+          <a href="mailto:info@groundeddating.com" class="btn btn-outline">info@groundeddating.com</a>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💬</div>
+          <h3 style="color: var(--accent-green); margin-bottom: 0.5rem;">WhatsApp / SMS</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Send a text directly to our matchmaker.</p>
+          <button class="btn btn-whatsapp whatsapp-launch-btn">📱 +44 7429 398 306</button>
+        </div>
+      </div>
+
+      <!-- Contact Form with CAPTCHA -->
+      <div class="form-card">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">Send Us A Message</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Full Name *</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="your.email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message *</label>
+            <textarea id="contact-message" class="form-textarea" rows="5" placeholder="How can we help you?" required></textarea>
+          </div>
+
+          <!-- Cloudflare Turnstile / CAPTCHA Widget Prep -->
+          <div class="captcha-container">
+            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div>
+            <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.7;">Protected by Cloudflare Turnstile CAPTCHA</p>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send Message ➔</button>
+        </form>
+        <div id="contact-feedback" style="display: none; margin-top: 1.5rem; text-align: center; color: var(--accent-green);">
+          ✓ Message sent successfully! We will respond shortly.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Grounded Connections Ltd. All Rights Reserved. <a href="index.html">Back to Home</a></p>
+    </div>
+  </footer>
+
+  <button type="button" class="cookie-floating-btn" data-cc="show-preferencesModal" aria-label="Cookie Settings">🍪</button>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.0.0/dist/cookieconsent.umd.js"></script>
+  <script src="js/cookieconsent-config.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.querySelector('#contact-feedback').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
