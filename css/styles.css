@@ -217,7 +217,6 @@ img {
   height: 44px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(0, 247, 255, 0.4));
 }
 
 .nav-menu {
@@ -337,7 +336,7 @@ img {
 
 /* 3D Starry Night Hero Section */
 .hero-section {
-  padding: 11rem 0 6rem;
+  padding: 7rem 0 4rem;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -345,9 +344,9 @@ img {
 }
 
 .hero-rotating-globe {
-  width: 480px;
-  height: 480px;
-  margin: 0 auto 2rem;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -365,7 +364,7 @@ img {
 .hero-subtitle {
   font-size: 1.35rem;
   color: var(--text-muted);
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.5rem;
   max-width: 750px;
 }
 
@@ -881,7 +880,7 @@ img {
 @media (max-width: 1024px) {
   .features-container { grid-template-columns: repeat(3, 1fr); }
   .journey-timeline { grid-template-columns: repeat(3, 1fr); }
-  .hero-rotating-globe { width: 360px; height: 360px; }
+  .hero-rotating-globe { width: 240px; height: 240px; }
   .footer-top-wrap { grid-template-columns: 1fr 1fr; }
 }
 
@@ -889,7 +888,7 @@ img {
   .features-container { grid-template-columns: 1fr; }
   .journey-timeline { grid-template-columns: 1fr; }
   .hero-content h1 { font-size: 2.75rem; }
-  .hero-rotating-globe { width: 280px; height: 280px; }
+  .hero-rotating-globe { width: 200px; height: 200px; }
   .mobile-nav-toggle { display: block; }
   .nav-menu {
     position: fixed;

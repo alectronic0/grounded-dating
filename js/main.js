@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function initGlobes() {
     const heroGlobe = document.querySelector('.hero-rotating-globe');
     const preloaderGlobe = document.querySelector('.preloader-globe');
-    const size = window.innerWidth < 768 ? 280 : (window.innerWidth < 1024 ? 360 : 480);
+    const size = window.innerWidth < 768 ? 200 : (window.innerWidth < 1024 ? 240 : 300);
     if (heroGlobe) mountGlobe(heroGlobe, size);
     if (preloaderGlobe) mountGlobe(preloaderGlobe, 160);
   }
