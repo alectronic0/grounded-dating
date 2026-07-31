@@ -14,9 +14,21 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', { 'ad_storage': 'denied', 'analytics_storage': 'denied' });
   </script>
+  <script src="https://unpkg.com/globe.gl@2.32.6/dist/globe.gl.min.js"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
+
+  <!-- Canvas Stars Background -->
+  <canvas id="canvas-stars"></canvas>
+
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-globe"></div>
+      <div class="preloader-caption">Grounded Dating (SPA Demo)</div>
+    </div>
+  </div>
 
   <!-- SPA Sticky Navigation Header -->
   <header class="site-header">
@@ -28,6 +40,7 @@
       <nav aria-label="SPA Navigation">
         <ul class="nav-menu">
           <li><a href="#hero" data-spa-target="hero" class="nav-link">Home</a></li>
+          <li><a href="#features" data-spa-target="features" class="nav-link">Features</a></li>
           <li><a href="#journey" data-spa-target="journey" class="nav-link">Flow</a></li>
           <li><a href="#about" data-spa-target="about" class="nav-link">How It Works</a></li>
           <li><a href="#mission" data-spa-target="mission" class="nav-link">Mission</a></li>
@@ -37,44 +50,59 @@
         </ul>
       </nav>
       <div class="nav-actions">
-        <a href="#join" data-spa-target="join" class="btn btn-primary">Join Waiting List</a>
+        <a href="#join" data-spa-target="join" class="btn join-btn">Join Waiting List</a>
         <button class="mobile-nav-toggle" aria-label="Toggle Menu">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- Section 1: Hero -->
+  <!-- Section 1: 3D Starry Hero -->
   <section id="hero" class="hero-section">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div class="highlight-badge">🌱 Single-Page Application Experience</div>
-        <h1>Making Real Life Dating <span class="text-gradient-green">Easier For You</span></h1>
-        <p class="hero-subtitle">
-          Affordable matchmaking the way it used to work: one human matchmaker, understanding who you genuinely are, setting you up on a curated blind date. No swiping. No infinite scroll. No texting traps.
-        </p>
-        <div class="hero-cta-group">
-          <a href="#join" data-spa-target="join" class="btn btn-yellow">Join The Waiting List ➔</a>
-          <button class="btn btn-whatsapp whatsapp-launch-btn">💬 Chat on WhatsApp</button>
-        </div>
+    <div class="container">
+      <div class="logo-wrapper">
+        <div class="hero-rotating-globe"></div>
       </div>
-      <div class="hero-card-visual">
-        <div class="hero-card-header">
-          <span class="match-badge">✨ Blind Date Guarantee</span>
-          <span style="font-size: 0.9rem; color: var(--text-muted);">London Venues</span>
+
+      <h1>Grounded <span class="text-gradient-green">Dating</span></h1>
+      <p class="hero-subtitle">Making Real Life Dating Easier For You</p>
+
+      <div class="hero-cta-group">
+        <a href="#join" data-spa-target="join" class="btn cta-btn">Sign Up</a>
+        <button class="btn btn-whatsapp whatsapp-launch-btn">💬 Chat on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Features -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="features-container">
+        <div class="feature-item">
+          <div class="feature-icon">🌐</div>
+          <p>Contact Us</p>
         </div>
-        <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">Real Connection, Zero Filters</h3>
-        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem;">
-          "Apps maximize choices. Grounded Dating maximizes action. We handle venue logistics so all you have to do is show up."
-        </p>
-        <div style="background: rgba(0, 117, 32, 0.2); border-left: 4px solid var(--accent-green-bright); padding: 1.25rem; border-radius: 8px;">
-          <p style="font-size: 0.95rem; font-weight: 700; color: #34d399;">🛡️ Verified Identity & Safety First</p>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem;">Every member completes ID verification via Didit before any date is set up.</p>
+        <div class="feature-item">
+          <div class="feature-icon">💬</div>
+          <p>Get Verified</p>
+          <span class="didit-badge">didit.me</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚙️</div>
+          <p>Consultation with Matchmaker</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📍</div>
+          <p>Personalised Blind Date Setup</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔒</div>
+          <p>Real Life Dating Made Easy</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 2: Journey Flow -->
+  <!-- Section 3: Journey Flow -->
   <section id="journey" class="journey-section">
     <div class="container">
       <div class="section-header">
@@ -124,7 +152,7 @@
     </div>
   </section>
 
-  <!-- Section 3: About / How It Works -->
+  <!-- Section 4: About -->
   <section id="about" style="padding: 6rem 0;">
     <div class="container legal-content" style="margin: 0 auto; max-width: 1000px;">
       <div class="highlight-badge">HOW IT WORKS</div>
@@ -134,8 +162,8 @@
     </div>
   </section>
 
-  <!-- Section 4: Mission -->
-  <section id="mission" style="padding: 4rem 0; background: rgba(10, 10, 12, 0.8);">
+  <!-- Section 5: Mission -->
+  <section id="mission" style="padding: 4rem 0; background: rgba(10, 14, 26, 0.75);">
     <div class="container legal-content" style="margin: 0 auto; max-width: 1000px;">
       <div class="highlight-badge">MISSION</div>
       <h2>Make Real Life Dating Easier</h2>
@@ -143,7 +171,7 @@
     </div>
   </section>
 
-  <!-- Section 5: Careers -->
+  <!-- Section 6: Careers -->
   <section id="careers" style="padding: 6rem 0;">
     <div class="container legal-content" style="margin: 0 auto; max-width: 1000px;">
       <div class="highlight-badge">CAREERS</div>
@@ -152,7 +180,7 @@
     </div>
   </section>
 
-  <!-- Section 6: FAQs -->
+  <!-- Section 7: FAQs -->
   <section id="faqs" class="faq-section">
     <div class="container">
       <div class="section-header">
@@ -166,15 +194,15 @@
             <span class="faq-toggle-icon" aria-hidden="true">+</span>
           </div>
           <div class="faq-body">
-            You complete ID verification via Didit, share your non-negotiables, and we arrange a blind date at a public London venue. No photos or bios beforehand!
+            You complete ID verification via Didit (didit.me), share your non-negotiables, and we arrange a blind date at a public London venue. No photos or bios beforehand!
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 7: Join Application Form -->
-  <section id="join" style="padding: 6rem 0; background: rgba(10, 10, 12, 0.8);">
+  <!-- Section 8: Join Application Form -->
+  <section id="join" style="padding: 6rem 0; background: rgba(10, 14, 26, 0.75);">
     <div class="container">
       <div class="section-header">
         <div class="highlight-badge">JOIN THE WAITING LIST</div>
@@ -200,7 +228,7 @@
     </div>
   </section>
 
-  <!-- Section 8: Contact -->
+  <!-- Section 9: Contact -->
   <section id="contact" style="padding: 6rem 0;">
     <div class="container" style="text-align: center;">
       <h2>Contact Matchmaking Team</h2>
@@ -211,8 +239,10 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Grounded Connections Ltd. All Rights Reserved. Links: <a href="legal.html" target="_blank">Legal Hub</a> | <a href="privacy-policy.html" target="_blank">Privacy</a> | <a href="terms-and-conditions.html" target="_blank">Terms</a></p>
+    <div class="container footer-inner">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Grounded Connections Ltd. All Rights Reserved. Links: <a href="legal.html" target="_blank">Legal Hub</a> | <a href="privacy-policy.html" target="_blank">Privacy</a> | <a href="terms-and-conditions.html" target="_blank">Terms</a></p>
+      </div>
     </div>
   </footer>
 

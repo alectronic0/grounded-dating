@@ -23,9 +23,21 @@
     });
   </script>
   
+  <script src="https://unpkg.com/globe.gl@2.32.6/dist/globe.gl.min.js"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
+
+  <!-- Starry Background Canvas -->
+  <canvas id="canvas-stars"></canvas>
+
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-globe"></div>
+      <div class="preloader-caption">Grounded Dating</div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="site-header">
@@ -45,58 +57,74 @@
         </ul>
       </nav>
       <div class="nav-actions">
-        <a href="join.html" class="btn btn-primary">Join Waiting List</a>
+        <a href="https://api.whatsapp.com/send/?phone=447429398306&text&type=phone_number&app_absent=0" target="_blank" class="btn join-btn">Join the waiting list</a>
         <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- 3D Starry Hero Section -->
   <section class="hero-section">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div class="highlight-badge">🌱 Human-First Dating • London</div>
-        <h1>Making Real Life Dating <span class="text-gradient-green">Easier For You</span></h1>
-        <p class="hero-subtitle">
-          Affordable matchmaking the way it used to work: one human matchmaker, understanding who you genuinely are, setting you up on a curated blind date. No swiping. No infinite scroll. No texting traps.
-        </p>
-        <div class="hero-cta-group">
-          <a href="join.html" class="btn btn-yellow">Join The Waiting List ➔</a>
-          <button class="btn btn-whatsapp whatsapp-launch-btn">💬 Chat on WhatsApp</button>
-        </div>
-        <div class="hero-stats-row">
-          <div class="stat-item">
-            <h3>100%</h3>
-            <p>ID Verified (via Didit)</p>
-          </div>
-          <div class="stat-item">
-            <h3>0</h3>
-            <p>Swipe Algorithms</p>
-          </div>
-          <div class="stat-item">
-            <h3>From £20</h3>
-            <p>Pay As You Go</p>
-          </div>
-        </div>
+    <div class="container">
+      <div class="logo-wrapper">
+        <div class="hero-rotating-globe"></div>
       </div>
-      <div class="hero-card-visual">
-        <div class="hero-card-header">
-          <span class="match-badge">✨ Blind Date Guarantee</span>
-          <span style="font-size: 0.9rem; color: var(--text-muted);">London Venues</span>
+
+      <h1>Grounded <span class="text-gradient-green">Dating</span></h1>
+      <p class="hero-subtitle">Making Real Life Dating Easier For You</p>
+
+      <div class="hero-cta-group">
+        <a href="join.html" class="btn cta-btn">Sign Up</a>
+        <button class="btn btn-whatsapp whatsapp-launch-btn">💬 Chat on WhatsApp</button>
+      </div>
+
+      <div class="hero-stats-row" style="max-width: 800px; margin: 0 auto;">
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>ID Verified (via Didit)</p>
         </div>
-        <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">Real Connection, Zero Filters</h3>
-        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem;">
-          "Apps maximize choices. Grounded Dating maximizes action. We handle venue logistics so all you have to do is show up."
-        </p>
-        <div style="background: rgba(0, 117, 32, 0.2); border-left: 4px solid var(--accent-green-bright); padding: 1.25rem; border-radius: 8px;">
-          <p style="font-size: 0.95rem; font-weight: 700; color: #34d399;">🛡️ Verified Identity & Safety First</p>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem;">Every member completes ID verification via Didit before any date is set up.</p>
+        <div class="stat-item">
+          <h3>0</h3>
+          <p>Swipe Algorithms</p>
+        </div>
+        <div class="stat-item">
+          <h3>From £20</h3>
+          <p>Pay As You Go</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6-Step Journey Visualizer Section -->
+  <!-- 5 Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-container">
+        <div class="feature-item">
+          <div class="feature-icon">🌐</div>
+          <p>Contact Us</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">💬</div>
+          <p>Get Verified</p>
+          <span class="didit-badge">didit.me</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚙️</div>
+          <p>Consultation with our Matchmaker</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📍</div>
+          <p>Personalised Blind Date Setup</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔒</div>
+          <p>Real Life Dating Made Easy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6-Step Journey Timeline Section -->
   <section class="journey-section">
     <div class="container">
       <div class="section-header">
@@ -109,38 +137,38 @@
         <div class="journey-step">
           <div class="step-num">1</div>
           <h3 class="step-title">Contact Us</h3>
-          <p class="step-desc">Reach out via site form or WhatsApp to start your inquiry.</p>
+          <p class="step-desc">Reach out via form or WhatsApp.</p>
         </div>
 
         <div class="journey-step didit-step">
           <div class="step-num">2</div>
           <h3 class="step-title">ID Verify</h3>
-          <p class="step-desc">Verify your identity securely with Didit to keep our network safe.</p>
+          <p class="step-desc">Verify your identity securely with Didit.</p>
           <span class="didit-badge">didit.me</span>
         </div>
 
         <div class="journey-step">
           <div class="step-num">3</div>
           <h3 class="step-title">Sign Up</h3>
-          <p class="step-desc">Share your values, availability, and non-negotiables in your profile.</p>
+          <p class="step-desc">Share your values & non-negotiables.</p>
         </div>
 
         <div class="journey-step">
           <div class="step-num">4</div>
           <h3 class="step-title">Waiting List</h3>
-          <p class="step-desc">Our human matchmaker searches our network & headhunts for you.</p>
+          <p class="step-desc">Matchmaker searches our network.</p>
         </div>
 
         <div class="journey-step">
           <div class="step-num">5</div>
           <h3 class="step-title">Iterate</h3>
-          <p class="step-desc">Go on blind dates at curated London venues & give post-date feedback.</p>
+          <p class="step-desc">Go on blind dates & give feedback.</p>
         </div>
 
         <div class="journey-step">
           <div class="step-num">6</div>
           <h3 class="step-title">Partner</h3>
-          <p class="step-desc">Build a genuine connection with someone matching your intentions.</p>
+          <p class="step-desc">Build a life long relationship.</p>
         </div>
       </div>
     </div>
@@ -217,7 +245,7 @@
             <span class="faq-toggle-icon" aria-hidden="true">+</span>
           </div>
           <div class="faq-body">
-            You answer our questionnaire detailing your non-negotiables, undergo ID verification via Didit, and join the waiting list. Our matchmaker sets you up on a blind date at a public London venue (coffee shop, pub, gallery, bookshop). No profiles or bios—just their name and venue plans!
+            You answer our questionnaire detailing your non-negotiables, undergo ID verification via Didit (https://didit.me/), and join the waiting list. Our matchmaker sets you up on a blind date at a public London venue. No profiles or bios—just their name and venue plans!
           </div>
         </div>
 
@@ -248,53 +276,77 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with QR Card -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="brand-logo">
-            <img src="img/logo.png" alt="Grounded Connections Logo">
-            <span>Grounded<span class="text-gradient-green">Dating</span></span>
-          </a>
-          <p>Making Real Life Dating Easier For You. Human matchmaking, ID-verified blind dates at curated London venues.</p>
-          <div class="footer-social-row">
-            <a href="https://www.instagram.com/_groundeddating/" target="_blank" rel="noopener" class="social-pill">📸 Instagram</a>
-            <a href="https://www.facebook.com/profile.php?id=61567545878983" target="_blank" rel="noopener" class="social-pill">📘 Facebook</a>
-            <a href="https://x.com/groundeddating_" target="_blank" rel="noopener" class="social-pill">🐦 X / Twitter</a>
-            <a href="https://www.linkedin.com/company/groundeddating/posts/?feedView=all" target="_blank" rel="noopener" class="social-pill">💼 LinkedIn</a>
-            <a href="https://www.youtube.com/@groundeddating" target="_blank" rel="noopener" class="social-pill">▶️ YouTube</a>
-            <a href="https://www.tiktok.com/@groundeddating" target="_blank" rel="noopener" class="social-pill">🎵 TikTok</a>
+    <div class="container footer-inner">
+      <div class="footer-top-wrap">
+        <div class="footer-left">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-logo">
+              <img src="img/logo.png" alt="Grounded Connections Logo">
+              <span>Grounded<span class="text-gradient-green">Dating</span></span>
+            </a>
+          </div>
+          <div class="footer-qr-card">
+            <div class="qr-box">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Code">
+            </div>
+            <div class="qr-text">
+              <strong>Scan the QR<br>code to get the<br>Grounded Dating app</strong>
+            </div>
           </div>
         </div>
 
-        <div class="footer-column">
-          <h4>Company</h4>
-          <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
+        <div class="footer-col">
+          <h3>Company & Details</h3>
+          <ul>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
             <li><a href="mission.html">Mission</a></li>
             <li><a href="careers.html">Careers</a></li>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="join.html">Join the waiting list</a></li>
           </ul>
         </div>
 
-        <div class="footer-column">
-          <h4>Legal</h4>
-          <ul class="footer-links">
-            <li><a href="legal.html">Legal Hub</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <div class="footer-col">
+          <h3>Legal & Guidelines</h3>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy</a></li>
+            <li><a href="legal.html">Cookies</a></li>
             <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
             <li><a href="community-guidelines.html">Community Guidelines</a></li>
+            <li><a href="legal.html">Legal</a></li>
           </ul>
         </div>
 
-        <div class="footer-column">
-          <h4>Contact & Verify</h4>
+        <div class="footer-col">
+          <h3>Contact & Verify</h3>
           <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.75rem;">Email: info@groundeddating.com</p>
           <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem;">WhatsApp: +44 7429 398306</p>
           <button class="btn btn-outline verify-didit-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🔒 Didit ID Verification</button>
         </div>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/_groundeddating/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61567545878983" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://x.com/groundeddating_" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4l16 16M4 20L20 4"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/groundeddating/posts/?feedView=all" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://www.youtube.com/@groundeddating" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+        </a>
+        <a href="https://www.tiktok.com/@groundeddating" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+        </a>
       </div>
 
       <div class="footer-bottom">
