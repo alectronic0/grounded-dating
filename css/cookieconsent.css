@@ -1,14 +1,25 @@
 /* Vanilla CookieConsent v3 Theme Overrides */
 #cc-main {
-  --cc-bg: #0f172a;
-  --cc-text: #f8fafc;
-  --cc-btn-primary-bg: #10b981;
+  --cc-bg: #0b1426;
+  --cc-text: #ffffff;
+  --cc-btn-primary-bg: #007520;
   --cc-btn-primary-text: #ffffff;
-  --cc-btn-primary-hover-bg: #059669;
+  --cc-btn-primary-hover-bg: #009028;
   --cc-btn-secondary-bg: #1e293b;
-  --cc-btn-secondary-text: #f8fafc;
+  --cc-btn-secondary-text: #ffffff;
   --cc-btn-secondary-hover-bg: #334155;
-  --cc-toggle-on-bg: #10b981;
+  --cc-toggle-on-bg: #007520;
   --cc-modal-border-radius: 16px;
   --cc-font-family: 'Inter', sans-serif;
+}
+
+/* Position consent modal on the bottom-left above floating button */
+#cc-main .cm--box.cm--bottom.cm--left,
+#cc-main .cm-wrapper {
+  bottom: 80px !important;
+  left: 20px !important;
+  right: auto !important;
+  max-width: 380px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

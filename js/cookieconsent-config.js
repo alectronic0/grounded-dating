@@ -31,6 +31,20 @@ window.addEventListener('load', function() {
   if (typeof CookieConsent !== 'undefined') {
     CookieConsent.run({
       autoClearCookies: true,
+      guiOptions: {
+        consentModal: {
+          layout: 'box',
+          position: 'bottom left',
+          equalWeightButtons: true,
+          flipButtons: false
+        },
+        preferencesModal: {
+          layout: 'box',
+          position: 'left',
+          equalWeightButtons: true,
+          flipButtons: false
+        }
+      },
       categories: {
         necessary: { readOnly: true },
         analytics: {
