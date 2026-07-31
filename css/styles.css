@@ -854,6 +854,30 @@ img {
   transform: translateY(-3px);
 }
 
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.footer-powered {
+  margin-top: 8px;
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.footer-powered a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.footer-powered a:hover {
+  color: var(--accent-yellow);
+}
+
 /* Floating Cookie Button */
 .cookie-floating-btn {
   position: fixed;
