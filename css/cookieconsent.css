@@ -1,6 +1,9 @@
-/* Vanilla CookieConsent v3 Theme Overrides */
+/* ==========================================
+   Vanilla CookieConsent v3 - High Readability & Contrast
+   ========================================== */
+
 #cc-main {
-  --cc-bg: #0b1426;
+  --cc-bg: #0c1527;
   --cc-text: #ffffff;
   --cc-btn-primary-bg: #007520;
   --cc-btn-primary-text: #ffffff;
@@ -16,10 +19,57 @@
 /* Position consent modal on the bottom-left above floating button */
 #cc-main .cm--box.cm--bottom.cm--left,
 #cc-main .cm-wrapper {
-  bottom: 80px !important;
+  bottom: 85px !important;
   left: 20px !important;
   right: auto !important;
-  max-width: 380px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 400px !important;
+  background-color: #0c1527 !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85) !important;
+  border: 1px solid rgba(0, 247, 255, 0.4) !important;
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+}
+
+/* Typography Readability Enhancements */
+#cc-main .cm__title {
+  color: #ffffff !important;
+  font-size: 1.3rem !important;
+  font-weight: 800 !important;
+  font-family: 'Outfit', sans-serif !important;
+  margin-bottom: 0.75rem !important;
+}
+
+#cc-main .cm__desc {
+  color: #e2e8f0 !important;
+  font-size: 0.975rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+#cc-main .cm__btn {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  border-radius: 9999px !important;
+  padding: 0.65rem 1.25rem !important;
+}
+
+#cc-main .cm__btn--primary {
+  background-color: #007520 !important;
+  color: #ffffff !important;
+}
+
+#cc-main .cm__btn--primary:hover {
+  background-color: #009028 !important;
+}
+
+#cc-main .cm__btn--secondary {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+#cc-main .cm__btn--secondary:hover {
+  background-color: #334155 !important;
+  border-color: rgba(250, 204, 21, 0.5) !important;
 }

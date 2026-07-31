@@ -59,25 +59,29 @@ window.addEventListener('load', function() {
           en: {
             consentModal: {
               title: 'We value your privacy 🍪',
-              description: 'Grounded Dating uses essential cookies for site functionality and optional analytical cookies to measure site interactions. No marketing cookies or data selling.',
+              description: 'Grounded Dating uses essential cookies to ensure site functionality and optional analytical cookies to measure visitor interactions. We never sell your data or use advertising trackers.',
               acceptAllBtn: 'Accept all',
               acceptNecessaryBtn: 'Reject optional',
-              showPreferencesBtn: 'Manage preferences'
+              showPreferencesBtn: 'How we use cookies'
             },
             preferencesModal: {
-              title: 'Cookie Preferences',
+              title: 'How We Use Cookies',
               acceptAllBtn: 'Accept all',
               acceptNecessaryBtn: 'Reject optional',
               savePreferencesBtn: 'Save settings',
               sections: [
                 {
+                  title: 'Cookie Usage Overview',
+                  description: 'Grounded Dating is committed to transparency. We use strictly necessary cookies for core operations and optional analytics to measure site traffic.'
+                },
+                {
                   title: 'Strictly Necessary Cookies',
-                  description: 'These cookies are essential for the proper functioning of the website.',
+                  description: 'Essential cookies required for security, login sessions, and site navigation.',
                   category: 'necessary'
                 },
                 {
                   title: 'Analytics Cookies',
-                  description: 'These cookies help us understand how visitors interact with Grounded Dating.',
+                  description: 'Optional Google Analytics cookies that help us understand how users interact with our site.',
                   category: 'analytics'
                 }
               ]
@@ -89,4 +93,15 @@ window.addEventListener('load', function() {
       onChange: handleConsentUpdate
     });
   }
+
+  // Bind floating cookie button to open the "We value your privacy" consent modal
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.cookie-floating-btn') || e.target.closest('[data-cc="show-preferencesModal"]');
+    if (btn) {
+      e.preventDefault();
+      if (typeof CookieConsent !== 'undefined' && typeof CookieConsent.show === 'function') {
+        CookieConsent.show(true);
+      }
+    }
+  });
 });
