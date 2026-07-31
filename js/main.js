@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   diditBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      window.open('https://verify.didit.me', '_blank', 'noopener,noreferrer');
+      window.open('https://didit.me/', '_blank', 'noopener,noreferrer');
     });
   });
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div style="background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #10b981; padding: 1.25rem; border-radius: 12px; margin-top: 1rem; text-align: center;">
             <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">🎉 Application Received!</h4>
             <p style="font-size: 0.9rem;">Thank you for joining Grounded Dating. Next step: Verify your ID with Didit.</p>
-            <a href="https://verify.didit.me" target="_blank" class="btn btn-yellow" style="margin-top: 1rem; display: inline-flex;">Complete Verification on Didit ➔</a>
+            <a href="https://didit.me/" target="_blank" class="btn btn-yellow" style="margin-top: 1rem; display: inline-flex;">Complete Verification on Didit ➔</a>
           </div>
         `;
       }
