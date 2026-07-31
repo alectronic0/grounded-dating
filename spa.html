@@ -21,19 +21,21 @@
   <!-- SPA Sticky Navigation Header -->
   <header class="site-header">
     <div class="container nav-wrapper">
-      <a href="#hero" data-spa-target="hero" class="brand-logo">
-        <div class="logo-icon">G</div>
-        <span>Grounded<span class="text-gradient-green">Dating</span> <span style="font-size: 0.65rem; background: var(--primary-blue); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--accent-yellow);">SPA DEMO</span></span>
+      <a href="#hero" data-spa-target="hero" class="brand-logo" aria-label="Grounded Dating SPA Home">
+        <img src="img/logo.png" alt="Grounded Connections Logo">
+        <span>Grounded<span class="text-gradient-green">Dating</span> <span style="font-size: 0.7rem; background: var(--primary-blue-dark); border: 1px solid var(--primary-cyan); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--accent-yellow);">SPA DEMO</span></span>
       </a>
-      <ul class="nav-menu">
-        <li><a href="#hero" data-spa-target="hero" class="nav-link">Home</a></li>
-        <li><a href="#journey" data-spa-target="journey" class="nav-link">Flow</a></li>
-        <li><a href="#about" data-spa-target="about" class="nav-link">How It Works</a></li>
-        <li><a href="#mission" data-spa-target="mission" class="nav-link">Mission</a></li>
-        <li><a href="#careers" data-spa-target="careers" class="nav-link">Careers</a></li>
-        <li><a href="#faqs" data-spa-target="faqs" class="nav-link">FAQs</a></li>
-        <li><a href="#contact" data-spa-target="contact" class="nav-link">Contact</a></li>
-      </ul>
+      <nav aria-label="SPA Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" data-spa-target="hero" class="nav-link">Home</a></li>
+          <li><a href="#journey" data-spa-target="journey" class="nav-link">Flow</a></li>
+          <li><a href="#about" data-spa-target="about" class="nav-link">How It Works</a></li>
+          <li><a href="#mission" data-spa-target="mission" class="nav-link">Mission</a></li>
+          <li><a href="#careers" data-spa-target="careers" class="nav-link">Careers</a></li>
+          <li><a href="#faqs" data-spa-target="faqs" class="nav-link">FAQs</a></li>
+          <li><a href="#contact" data-spa-target="contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
       <div class="nav-actions">
         <a href="#join" data-spa-target="join" class="btn btn-primary">Join Waiting List</a>
         <button class="mobile-nav-toggle" aria-label="Toggle Menu">☰</button>
@@ -58,15 +60,15 @@
       <div class="hero-card-visual">
         <div class="hero-card-header">
           <span class="match-badge">✨ Blind Date Guarantee</span>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">London Venues</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">London Venues</span>
         </div>
         <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">Real Connection, Zero Filters</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem;">
           "Apps maximize choices. Grounded Dating maximizes action. We handle venue logistics so all you have to do is show up."
         </p>
-        <div style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; padding: 1rem; border-radius: 8px;">
-          <p style="font-size: 0.85rem; font-weight: 600; color: #10b981;">🛡️ Verified Identity & Safety First</p>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Every member completes ID verification via Didit before any date is set up.</p>
+        <div style="background: rgba(0, 117, 32, 0.2); border-left: 4px solid var(--accent-green-bright); padding: 1.25rem; border-radius: 8px;">
+          <p style="font-size: 0.95rem; font-weight: 700; color: #34d399;">🛡️ Verified Identity & Safety First</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem;">Every member completes ID verification via Didit before any date is set up.</p>
         </div>
       </div>
     </div>
@@ -76,7 +78,7 @@
   <section id="journey" class="journey-section">
     <div class="container">
       <div class="section-header">
-        <div class="highlight-badge">🗺️ The Journey</div>
+        <div class="highlight-badge">MAP</div>
         <h2>From Contact to <span class="text-gradient-yellow">Life Long Partner</span></h2>
         <p>A simple 6-step pathway from inquiry to meeting your partner.</p>
       </div>
@@ -84,38 +86,38 @@
       <div class="journey-timeline">
         <div class="journey-step">
           <div class="step-num">1</div>
-          <h4 class="step-title">Contact Us</h4>
+          <h3 class="step-title">Contact Us</h3>
           <p class="step-desc">Reach out via form or WhatsApp.</p>
         </div>
 
         <div class="journey-step didit-step">
           <div class="step-num">2</div>
-          <h4 class="step-title">ID Verify</h4>
+          <h3 class="step-title">ID Verify</h3>
           <p class="step-desc">Verify your ID securely via Didit.</p>
           <span class="didit-badge">verify.didit.me</span>
         </div>
 
         <div class="journey-step">
           <div class="step-num">3</div>
-          <h4 class="step-title">Sign Up</h4>
+          <h3 class="step-title">Sign Up</h3>
           <p class="step-desc">Share values & non-negotiables.</p>
         </div>
 
         <div class="journey-step">
           <div class="step-num">4</div>
-          <h4 class="step-title">Waiting List</h4>
+          <h3 class="step-title">Waiting List</h3>
           <p class="step-desc">Matchmaker searches our network.</p>
         </div>
 
         <div class="journey-step">
           <div class="step-num">5</div>
-          <h4 class="step-title">Iterate</h4>
+          <h3 class="step-title">Iterate</h3>
           <p class="step-desc">Go on blind dates & give feedback.</p>
         </div>
 
         <div class="journey-step">
           <div class="step-num">6</div>
-          <h4 class="step-title">Partner</h4>
+          <h3 class="step-title">Partner</h3>
           <p class="step-desc">Build a life long relationship.</p>
         </div>
       </div>
@@ -133,7 +135,7 @@
   </section>
 
   <!-- Section 4: Mission -->
-  <section id="mission" style="padding: 4rem 0; background: rgba(15, 23, 42, 0.6);">
+  <section id="mission" style="padding: 4rem 0; background: rgba(10, 10, 12, 0.8);">
     <div class="container legal-content" style="margin: 0 auto; max-width: 1000px;">
       <div class="highlight-badge">MISSION</div>
       <h2>Make Real Life Dating Easier</h2>
@@ -157,11 +159,11 @@
         <div class="highlight-badge">FAQS</div>
         <h2>Frequently Asked Questions</h2>
       </div>
-      <div class="faq-accordion">
+      <div class="faq-accordion" role="region" aria-label="Frequently Asked Questions">
         <div class="faq-item">
-          <div class="faq-header">
+          <div class="faq-header" role="button" aria-expanded="false">
             <span>How does a Grounded blind date work?</span>
-            <span class="faq-toggle-icon">+</span>
+            <span class="faq-toggle-icon" aria-hidden="true">+</span>
           </div>
           <div class="faq-body">
             You complete ID verification via Didit, share your non-negotiables, and we arrange a blind date at a public London venue. No photos or bios beforehand!
@@ -172,7 +174,7 @@
   </section>
 
   <!-- Section 7: Join Application Form -->
-  <section id="join" style="padding: 6rem 0; background: rgba(15, 23, 42, 0.6);">
+  <section id="join" style="padding: 6rem 0; background: rgba(10, 10, 12, 0.8);">
     <div class="container">
       <div class="section-header">
         <div class="highlight-badge">JOIN THE WAITING LIST</div>
