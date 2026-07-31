@@ -58,8 +58,8 @@ window.addEventListener('load', function() {
         translations: {
           en: {
             consentModal: {
-              title: 'We value your privacy 🍪',
-              description: 'Grounded Dating uses essential cookies to ensure site functionality and optional analytical cookies to measure visitor interactions. We never sell your data or use advertising trackers.',
+              title: 'Privacy & Cookies Notice 🍪',
+              description: 'We use cookies to enhance your browsing experience and analyze site traffic anonymously.',
               acceptAllBtn: 'Accept all',
               acceptNecessaryBtn: 'Reject optional',
               showPreferencesBtn: 'How we use cookies'
