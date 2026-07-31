@@ -58,14 +58,14 @@ window.addEventListener('load', function() {
         translations: {
           en: {
             consentModal: {
-              title: 'Privacy & Cookies Notice 🍪',
+              title: 'Cookie Settings 🍪',
               description: 'We use cookies to enhance your browsing experience and analyze site traffic anonymously.',
               acceptAllBtn: 'Accept All',
               acceptNecessaryBtn: 'Reject Non-Essential',
-              showPreferencesBtn: 'Manage Preferences'
+              showPreferencesBtn: 'How we use cookies'
             },
             preferencesModal: {
-              title: "Manage Cookie Preferences",
+              title: "How We Use Cookies",
               acceptAllBtn: "Accept All",
               acceptNecessaryBtn: "Reject Non-Essential",
               closeIconLabel: "Close",
