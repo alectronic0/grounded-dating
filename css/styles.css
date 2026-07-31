@@ -909,6 +909,21 @@ img {
   color: var(--accent-yellow);
 }
 
+/* Compact Career Layouts */
+.career-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .career-subgrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 /* Floating Cookie Button */
 .cookie-floating-btn {
   position: fixed;
