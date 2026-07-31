@@ -60,9 +60,9 @@ window.addEventListener('load', function() {
             consentModal: {
               title: 'Privacy & Cookies Notice 🍪',
               description: 'We use cookies to enhance your browsing experience and analyze site traffic anonymously.',
-              acceptAllBtn: 'Accept all',
-              acceptNecessaryBtn: 'Reject optional',
-              showPreferencesBtn: 'How we use cookies'
+              acceptAllBtn: 'Accept All',
+              acceptNecessaryBtn: 'Reject Non-Essential',
+              showPreferencesBtn: 'Manage Preferences'
             },
             preferencesModal: {
               title: "Manage Cookie Preferences",
