@@ -65,23 +65,24 @@ window.addEventListener('load', function() {
               showPreferencesBtn: 'How we use cookies'
             },
             preferencesModal: {
-              title: 'How We Use Cookies',
-              acceptAllBtn: 'Accept all',
-              acceptNecessaryBtn: 'Reject optional',
+              title: "Manage Cookie Preferences",
+              acceptAllBtn: "Accept All",
+              acceptNecessaryBtn: "Reject Non-Essential",
+              closeIconLabel: "Close",
               sections: [
                 {
-                  title: 'Cookie Usage Overview',
-                  description: 'Grounded Dating is committed to transparency. We use strictly necessary cookies for core operations and optional analytics to measure site traffic.'
+                  title: "Cookie Usage Overview",
+                  description: "We use cookies to ensure basic website functionality and analyze anonymous site traffic to improve user experience."
                 },
                 {
-                  title: 'Strictly Necessary Cookies',
-                  description: 'Essential cookies required for security, login sessions, and site navigation.',
-                  category: 'necessary'
+                  title: "Strictly Necessary Cookies",
+                  description: "Essential cookies required for website security, page navigation, and basic core operations. These cannot be disabled.",
+                  category: "necessary"
                 },
                 {
-                  title: 'Analytics Cookies',
-                  description: 'Optional Google Analytics cookies that help us understand how users interact with our site.',
-                  category: 'analytics'
+                  title: "Performance & Analytics Cookies",
+                  description: "Optional Google Analytics cookies that help us measure site traffic and visitor interactions anonymously.",
+                  category: "analytics"
                 }
               ]
             }
