@@ -68,7 +68,6 @@ window.addEventListener('load', function() {
               title: 'How We Use Cookies',
               acceptAllBtn: 'Accept all',
               acceptNecessaryBtn: 'Reject optional',
-              savePreferencesBtn: 'Save settings',
               sections: [
                 {
                   title: 'Cookie Usage Overview',
@@ -94,14 +93,15 @@ window.addEventListener('load', function() {
     });
   }
 
-  // Bind floating cookie button to open the "We value your privacy" consent modal
+  // Bind floating cookie button strictly to open the "We value your privacy" modal
   document.addEventListener('click', function(e) {
     const btn = e.target.closest('.cookie-floating-btn') || e.target.closest('[data-cc="show-preferencesModal"]');
     if (btn) {
       e.preventDefault();
+      e.stopPropagation();
       if (typeof CookieConsent !== 'undefined' && typeof CookieConsent.show === 'function') {
         CookieConsent.show(true);
       }
     }
-  });
+  }, true);
 });

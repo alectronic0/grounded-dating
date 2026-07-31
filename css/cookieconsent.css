@@ -1,5 +1,5 @@
 /* ==========================================
-   Vanilla CookieConsent v3 - High Readability & Contrast
+   Vanilla CookieConsent v3 - High Readability & Custom Overrides
    ========================================== */
 
 #cc-main {
@@ -31,7 +31,8 @@
 }
 
 /* Typography Readability Enhancements */
-#cc-main .cm__title {
+#cc-main .cm__title,
+#cc-main .pm__title {
   color: #ffffff !important;
   font-size: 1.3rem !important;
   font-weight: 800 !important;
@@ -39,14 +40,16 @@
   margin-bottom: 0.75rem !important;
 }
 
-#cc-main .cm__desc {
+#cc-main .cm__desc,
+#cc-main .pm__section-desc {
   color: #e2e8f0 !important;
   font-size: 0.975rem !important;
   line-height: 1.65 !important;
   margin-bottom: 1.25rem !important;
 }
 
-#cc-main .cm__btn {
+#cc-main .cm__btn,
+#cc-main .pm__btn {
   font-family: 'Outfit', sans-serif !important;
   font-weight: 700 !important;
   font-size: 0.95rem !important;
@@ -54,22 +57,33 @@
   padding: 0.65rem 1.25rem !important;
 }
 
-#cc-main .cm__btn--primary {
+#cc-main .cm__btn--primary,
+#cc-main .pm__btn--primary {
   background-color: #007520 !important;
   color: #ffffff !important;
 }
 
-#cc-main .cm__btn--primary:hover {
+#cc-main .cm__btn--primary:hover,
+#cc-main .pm__btn--primary:hover {
   background-color: #009028 !important;
 }
 
-#cc-main .cm__btn--secondary {
+#cc-main .cm__btn--secondary,
+#cc-main .pm__btn--secondary {
   background-color: #1e293b !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-#cc-main .cm__btn--secondary:hover {
+#cc-main .cm__btn--secondary:hover,
+#cc-main .pm__btn--secondary:hover {
   background-color: #334155 !important;
   border-color: rgba(250, 204, 21, 0.5) !important;
+}
+
+/* Hide Save Settings button on Preferences Modal */
+#cc-main .pm__btn--save,
+#cc-main button[data-role="save"],
+#cc-main .pm__btn[data-role="save"] {
+  display: none !important;
 }
