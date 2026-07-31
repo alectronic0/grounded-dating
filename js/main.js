@@ -164,6 +164,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // 8. Form Submissions
   const joinForm = document.querySelector('#grounded-join-form');
   if (joinForm) {
+    const sourceSelect = joinForm.querySelector('#join-source');
+    const sourceOtherContainer = joinForm.querySelector('#join-source-other-container');
+    if (sourceSelect && sourceOtherContainer) {
+      sourceSelect.addEventListener('change', () => {
+        if (sourceSelect.value === 'Other') {
+          sourceOtherContainer.style.display = 'block';
+          const otherInput = sourceOtherContainer.querySelector('input');
+          if (otherInput) otherInput.focus();
+        } else {
+          sourceOtherContainer.style.display = 'none';
+        }
+      });
+    }
+
     joinForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const feedbackDiv = document.querySelector('#form-feedback');
